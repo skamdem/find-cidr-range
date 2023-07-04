@@ -1,6 +1,5 @@
-resource "aws_vpc" "vpc" {
-  cidr_block = var.cidr_block
+data "aws_vpc" "my_vpc" {
   tags = {
-    Name = "${local.vpc_name}"
+    Name = "tf_exercise"
   }
 }
